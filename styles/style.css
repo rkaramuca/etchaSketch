@@ -1,0 +1,114 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*****************************************************************/
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #0B0C10;
+}
+
+/* Put everything in a flexbox with vertical alignment */
+#flex-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Set sizing for the header */
+#title {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    width: 100vw;
+}
+
+#title h1 {
+    color: #C5C6C7;
+    font-size: 3em;
+}
+
+/* Set proper sizing for reset button */
+#reset-container button {
+    background-color: #1F2833;
+    border: 4px solid #66FCF1;
+    color: #C5C6C7;
+    font-size: 30px;
+    height: 50px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    width: 500px;
+}
+
+#reset-container button:hover {
+    transform: scale(1.05);
+}
+
+/* Put the grid inside of a CSS "grid" container */
+#grid-container {
+    display: grid;
+    grid-gap: 0;
+    /* the repeat for rows/cols is the number given in the JS file */
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    height: 500px;
+    width: 500px;
+}
+
+/* Grid item is the cell class  */
+.grid-item {
+    border: 1px solid #C5C6C7;
+    text-align: center;
+}
